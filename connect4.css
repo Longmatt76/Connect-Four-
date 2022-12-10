@@ -154,4 +154,6 @@ hr {
 }
 
 
-
+#wrap{
+  overflow-y: hidden;
+}

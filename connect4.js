@@ -33,7 +33,7 @@ if(currPlayer === 2){
 // by looping through the HEIGHT to create new arrays and setting the length of the arrays equal to the WIDTH  
 function makeBoard() {
    for (let i = 0; i < HEIGHT; i++){
-    board[i] = new Array(WIDTH);
+    board[i] = new Array(WIDTH).fill(null);
    }
    }
    
@@ -133,18 +133,18 @@ function handleClick(evt) {
   }
 
   // check for tie\ this doesnt work it's returning "tie" after any column fills to the top instead of all columns 
-//  if(board.every(function(row){
-//   row.every(function(cell){
-//     cell !== null
-//     { return endGame("It's a tie!")}
-//   })
+ if(board.every(function(row){
+  row.every(function(cell){
+    cell !== null
+    
+  })
  
-//  }));
+ })) { return endGame("It's a tie!")};
  
 
 
   // switch players
-  if (currPlayer = currPlayer === 1){
+  if (currPlayer === 1){
     currPlayer = 2;
   }else {
     currPlayer = 1;
